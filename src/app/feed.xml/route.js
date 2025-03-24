@@ -3,12 +3,6 @@ import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
 
 export async function GET(req) {
-  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-
-  if (!siteUrl) {
-    throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable')
-  }
-
   let author = {
     name: 'Michał Krzysteczko',
     email: 'm.krzysteczko@icloud.com',
@@ -16,16 +10,13 @@ export async function GET(req) {
 
   let feed = new Feed({
     title: 'Michał Krzysteczko - Full Stack Developer',
-    description: 'Open-source Git client for macOS minimalists',
+    description: 'Personalna strona portfolio prezentująca moje projekty, doświadczenie oraz informacje o mnie jako Full Stack Developera.',
     author,
     id: siteUrl,
     link: siteUrl,
     image: `${siteUrl}/favicon.ico`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `All rights reserved ${new Date().getFullYear()}`,
-    feedLinks: {
-      rss2: `${siteUrl}/feed.xml`,
-    },
+    copyright: `Wszelkie prawa zastrzeżone ${new Date().getFullYear()}`,
   })
 
   let html = await (await fetch(new URL('/', req.url))).text()
