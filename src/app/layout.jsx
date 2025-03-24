@@ -23,11 +23,6 @@ export const metadata = {
   title: 'Michał Krzysteczko - Full Stack Developer',
   description:
   'Personalna strona portfolio prezentująca moje projekty, doświadczenie oraz informacje o mnie jako Full Stack Developera.',
-  alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
 }
 
 export default function RootLayout({ children }) {
