@@ -19,6 +19,15 @@ function GitHubIcon(props) {
   )
 }
 
+function EmailIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" {...props}>
+      <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+      <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+    </svg>
+  )
+}
+
 export function Intro() {
   return (
     <>
@@ -34,11 +43,14 @@ export function Intro() {
         </div>
       </li>
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
-        <IconLink href="#" icon={BookIcon} target="_blank" className="flex-none">
+        <IconLink href="https://www.linkedin.com/in/michał-krzysteczko-232927260/" icon={BookIcon} target="_blank" rel="nofollow" className="flex-none">
           LinkedIn
         </IconLink>
-        <IconLink href="https://github.com/xeross99" icon={GitHubIcon} target="_blank" className="flex-none">
+        <IconLink href="https://github.com/xeross99" icon={GitHubIcon} target="_blank" rel="nofollow" className="flex-none">
           GitHub
+        </IconLink>
+        <IconLink href="mailto:m.krzysteczko@icloud.com" icon={EmailIcon} target="_blank" className="flex-none">
+          E-Mail
         </IconLink>
       </div>
     </>
