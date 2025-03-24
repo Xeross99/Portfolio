@@ -10,12 +10,12 @@ export async function GET(req) {
   }
 
   let author = {
-    name: 'Joe Davola',
-    email: 'crazy.joe@example.com',
+    name: 'Michał Krzysteczko',
+    email: 'm.krzysteczko@icloud.com',
   }
 
   let feed = new Feed({
-    title: 'Commit',
+    title: 'Michał Krzysteczko - Full Stack Developer',
     description: 'Open-source Git client for macOS minimalists',
     author,
     id: siteUrl,
