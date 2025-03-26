@@ -2,6 +2,7 @@ import Image from 'next/image'
 import michal from '@/images/michal.jpeg'
 
 import { IconLink } from '@/components/IconLink'
+import { RevealFx } from '@/once-ui/components/RevealFx'
 
 function BookIcon(props) {
   return (
