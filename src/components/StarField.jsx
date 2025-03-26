@@ -102,12 +102,7 @@ function Star({ blurId, point: [cx, cy, dim, blur] }) {
 
   return (
     <g ref={groupRef} className="opacity-0">
-      <circle
-        ref={ref}
-        cx={cx}
-        cy={cy}
-        r={1}
-        style={{
+      <circle ref={ref} cx={cx} cy={cy} r={1} style={{
           transformOrigin: `${cx / 16}rem ${cy / 16}rem`,
           opacity: dim ? 0.2 : 1,
           transform: `scale(${dim ? 1 : 1.2})`,

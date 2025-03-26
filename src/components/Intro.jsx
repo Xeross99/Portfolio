@@ -32,8 +32,7 @@ export function Intro() {
   return (
     <>
       <li className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0">
-        <Image className="aspect-4/5 w-52 flex-none rounded-2xl object-cover object-left"
-          src={michal} alt="" />
+        <Image className="aspect-4/5 w-52 flex-none rounded-2xl object-cover object-left" src={michal} alt="" />
         <div className="max-w-xl flex-auto">
           <h3 className="text-lg/8 font-semibold tracking-tight text-white">Michał Krzysteczko</h3>
           <p className="text-base/7 text-gray-300">Full stack developer</p>
