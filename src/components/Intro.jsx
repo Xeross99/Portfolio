@@ -31,7 +31,7 @@ function EmailIcon(props) {
 
 export function Intro() {
   return (
-    <>
+    <RevealFx speed="medium" delay={0} translateY={0}>
       <li className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0">
         <Image className="aspect-4/5 w-52 flex-none rounded-2xl object-cover object-left" src={michal} alt="" />
         <div className="max-w-xl flex-auto">
@@ -53,6 +53,6 @@ export function Intro() {
           E-Mail
         </IconLink>
       </div>
-    </>
+    </RevealFx>
   )
 }

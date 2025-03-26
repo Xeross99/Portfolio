@@ -3,7 +3,6 @@ import { useId } from 'react'
 import { Intro } from '@/components/Intro'
 import { StarField } from '@/components/StarField'
 import { ThemeToggle } from '@/components/ThemeToggle'
-import { RevealFx } from '@/once-ui/components/RevealFx'
 
 function Timeline() {
   let id = useId()
@@ -52,21 +51,19 @@ function FixedSidebar({ main, footer }) {
   return (
     <div className="relative flex-none overflow-hidden px-6 lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex lg:px-0">
       <Glow />
-      <RevealFx speed="medium" delay={0} translateY={5}>
-        <div className="relative flex w-full lg:pointer-events-auto lg:mr-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] lg:overflow-x-hidden lg:overflow-y-auto lg:pl-[max(4rem,calc(50%-38rem))]">
-          <div className="mx-auto max-w-lg lg:mx-0 lg:flex lg:w-96 lg:max-w-none lg:flex-col lg:before:flex-1 lg:before:pt-6">
-            <div className="pt-20 pb-16 sm:pt-32 sm:pb-20 lg:py-20">
-              <div className="relative">
-                <StarField className="top-14 -right-44" />
-                {main}
-              </div>
-            </div>
-            <div className="flex flex-1 items-end justify-center pb-4 lg:justify-start lg:pb-6">
-              {footer}
+      <div className="relative flex w-full lg:pointer-events-auto lg:mr-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] lg:overflow-x-hidden lg:overflow-y-auto lg:pl-[max(4rem,calc(50%-38rem))]">
+        <div className="mx-auto max-w-lg lg:mx-0 lg:flex lg:w-96 lg:max-w-none lg:flex-col lg:before:flex-1 lg:before:pt-6">
+          <div className="pt-20 pb-16 sm:pt-32 sm:pb-20 lg:py-20 mb-4 lg:mb-6">
+            <div className="relative">
+              <StarField className="top-14 -right-44" />
+              {main}
             </div>
           </div>
+          <div className="flex flex-1 items-end justify-center pb-4 lg:justify-start lg:pb-6">
+            {footer}
+          </div>
         </div>
-      </RevealFx>
+      </div>
     </div>
   )
 }
@@ -78,11 +75,9 @@ export function Layout({ children }) {
         <ThemeToggle />
         <div className="relative flex-auto">
           <Timeline />
-          <RevealFx speed="medium" delay={0.5} translateY={5}>
-            <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
-              {children}
-            </main>
-          </RevealFx>
+          <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
+            {children}
+          </main>
         </div>
     </>
   )

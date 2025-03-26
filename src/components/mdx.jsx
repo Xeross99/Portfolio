@@ -1,5 +1,6 @@
 'use client'
 
+import { RevealFx } from '@/once-ui/components/RevealFx'
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,11 +13,7 @@ export const a = Link
 export const img = function Img(props) {
   return (
     <div className="relative overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900">
-      <Image
-        alt=""
-        sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
-        {...props}
-      />
+      <Image alt="" sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw" {...props} />
       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset dark:ring-white/10" />
     </div>
   )
@@ -24,17 +21,13 @@ export const img = function Img(props) {
 
 function ContentWrapper({ className, ...props }) {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-      <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
-        <div
-          className={clsx(
-            'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto',
-            className,
-          )}
-          {...props}
-        />
+    <RevealFx speed="medium" delay={0.5} translateY={0}>
+      <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+        <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+          <div className={clsx('mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto', className,)} {...props} />
+        </div>
       </div>
-    </div>
+    </RevealFx>
   )
 }
 
