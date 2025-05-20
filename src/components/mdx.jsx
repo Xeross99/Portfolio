@@ -8,7 +8,23 @@ import clsx from 'clsx'
 
 import { FormattedDate } from '@/components/FormattedDate'
 
-export const a = Link
+export const a = function A({ href, children, ...props }) {
+  const isExternal = href?.startsWith('http')
+  
+  if (isExternal) {
+    return (
+      <a href={href} target="_blank" {...props}>
+        {children}
+      </a>
+    )
+  } else {
+    return (
+      <Link href={href} {...props}>
+        {children}
+      </Link>
+    )
+  }
+}
 
 export const img = function Img(props) {
   return (
