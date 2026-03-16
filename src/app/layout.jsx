@@ -18,9 +18,9 @@ const monaSans = localFont({
 })
 
 export const metadata = {
-  title: 'Michał Krzysteczko - Full Stack Developer | Tworzenie Stron i Aplikacji Webowych',
+  title: 'Michał Krzysteczko - Strony internetowe i aplikacje webowe',
   description:
-    'Portfolio Michała Krzysteczko - doświadczonego Full Stack Developera. Tworzę nowoczesne strony internetowe, aplikacje webowe i sklepy online. Sprawdź moje projekty i doświadczenie!',
+    'Zajmuję się tworzeniem stron internetowych i aplikacji webowych. Głównie Next.js, Tailwind CSS i Ruby on Rails. Zobacz moje projekty.',
   author: 'Michał Krzysteczko',
   creator: 'Michał Krzysteczko',
 }

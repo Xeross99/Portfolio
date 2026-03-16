@@ -36,9 +36,9 @@ export function Intro() {
         <Image className="aspect-4/5 w-52 flex-none rounded-2xl object-cover object-left" src={michal} alt="" />
         <div className="max-w-xl flex-auto">
           <h3 className="text-lg/8 font-semibold tracking-tight text-white">Michał Krzysteczko</h3>
-          <p className="text-base/7 text-gray-300">Full stack developer</p>
+          <p className="text-base/7 text-gray-300">Tworzę strony internetowe i aplikacje webowe</p>
           <p className="mt-6 text-base/7 text-gray-300">
-          Tworzę nowoczesne, wydajne strony internetowe i aplikacje webowe. Skupiam się na dostarczaniu rozwiązań, które są zarówno intuicyjne w obsłudze, jak i zoptymalizowane pod kątem wydajności.
+          Cześć! Zajmuję się budowaniem stron i aplikacji webowych. Robię wszystko od A do Z - od projektu, przez kod, po wrzucenie na serwer. Poniżej kilka moich ostatnich projektów.
           </p>
         </div>
       </li>
