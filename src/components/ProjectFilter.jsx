@@ -59,7 +59,7 @@ export function ProjectFilterBar() {
               className={clsx(
                 'inline-flex max-w-full flex-nowrap gap-1.5 overflow-x-auto rounded-2xl bg-gray-100/75 p-1.5 backdrop-blur-md transition duration-300 ease-out [scrollbar-width:none] dark:bg-gray-800/75 [&::-webkit-scrollbar]:hidden',
                 hidden
-                  ? 'pointer-events-none -translate-y-[150%] scale-90 opacity-0'
+                  ? 'pointer-events-none -translate-y-2 scale-90 opacity-0'
                   : 'pointer-events-auto translate-y-0 scale-100 opacity-100',
               )}
             >
