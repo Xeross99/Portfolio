@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import clsx from 'clsx'
 import { Providers } from '@/app/providers'
 import '@/styles/tailwind.css'
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
       <body className="flex min-h-full flex-col bg-white dark:bg-gray-950">
         <Providers>{children}</Providers>
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
     </html>
   )
 }
