@@ -74,7 +74,7 @@ export function Layout({ children }) {
         <div className="relative flex-auto">
           <Timeline />
           <ProjectFilterBar />
-          <main className="space-y-20 pt-10 pb-20 sm:space-y-32 sm:pt-16 sm:pb-32">
+          <main className="space-y-20 pt-24 pb-20 sm:space-y-32 sm:pt-32 sm:pb-32">
             {children}
           </main>
         </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import clsx from 'clsx'
 
 const FilterContext = createContext({ filter: 'all', setFilter: () => {} })
@@ -29,16 +29,13 @@ export function ProjectFilterProvider({ children }) {
 export function ProjectFilterBar() {
   const { filter, setFilter } = useContext(FilterContext)
   const [hidden, setHidden] = useState(false)
-  const barRef = useRef(null)
 
   useEffect(() => {
     let lastY = window.scrollY
 
     const onScroll = () => {
       const y = window.scrollY
-      const stuck = barRef.current && barRef.current.getBoundingClientRect().top <= 0
-
-      if (y > lastY && stuck) {
+      if (y > lastY && y > 100) {
         setHidden(true)
       } else if (y < lastY) {
         setHidden(false)
@@ -51,7 +48,7 @@ export function ProjectFilterBar() {
   }, [])
 
   return (
-    <div ref={barRef} className="pointer-events-none sticky top-0 z-[60] pt-[max(1rem,env(safe-area-inset-top))]">
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] pt-[max(1rem,env(safe-area-inset-top))]">
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
           <div className="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
