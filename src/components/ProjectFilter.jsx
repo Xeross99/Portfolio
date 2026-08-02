@@ -51,13 +51,13 @@ export function ProjectFilterBar() {
   }, [])
 
   return (
-    <div ref={barRef} className="pointer-events-none sticky top-0 z-[60] pt-4">
+    <div ref={barRef} className="pointer-events-none sticky top-0 z-[60] pt-[max(1rem,env(safe-area-inset-top))]">
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
           <div className="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
             <div
               className={clsx(
-                'inline-flex max-w-full flex-nowrap gap-1.5 overflow-x-auto rounded-2xl bg-gray-100/95 p-1.5 backdrop-blur-sm transition duration-300 ease-out [scrollbar-width:none] dark:bg-gray-800/95 [&::-webkit-scrollbar]:hidden',
+                'inline-flex max-w-full flex-nowrap gap-1.5 overflow-x-auto rounded-2xl bg-gray-100/75 p-1.5 backdrop-blur-md transition duration-300 ease-out [scrollbar-width:none] dark:bg-gray-800/75 [&::-webkit-scrollbar]:hidden',
                 hidden
                   ? 'pointer-events-none -translate-y-[150%] scale-90 opacity-0'
                   : 'pointer-events-auto translate-y-0 scale-100 opacity-100',
