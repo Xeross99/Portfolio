@@ -68,7 +68,7 @@ export function ProjectFilterBar() {
                   : 'bg-gray-100 dark:bg-gray-800',
                 hidden
                   ? 'pointer-events-none -translate-y-2 scale-90 opacity-0'
-                  : 'pointer-events-auto translate-y-0 scale-100 opacity-100',
+                  : 'pointer-events-auto',
               )}
             >
               {filters.map((f) => (
