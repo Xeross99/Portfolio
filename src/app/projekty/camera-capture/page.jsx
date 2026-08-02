@@ -100,7 +100,7 @@ export default function Page() {
             <Zoomable
               key={photo.alt}
               image={photo.image}
-              className="overflow-hidden rounded-xl bg-gray-50 ring-1 ring-gray-900/20 ring-inset dark:bg-gray-900 dark:ring-white/15"
+              className="relative overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900"
             >
               <Image
                 src={photo.image}
@@ -108,6 +108,7 @@ export default function Page() {
                 className="h-auto w-full"
                 sizes="(min-width: 1024px) 18rem, 45vw"
               />
+              <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/20 ring-inset dark:ring-white/15" />
             </Zoomable>
           ))}
         </div>
