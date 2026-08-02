@@ -1,0 +1,41 @@
+import { SparkleIcon } from '@/components/SparkleIcon'
+import { ProjectLayout } from '@/components/ProjectLayout'
+import { Badge, Badges } from '@/components/Badge'
+
+export const metadata = {
+  title: 'Pixel Picture - sklep internetowy w Ruby on Rails',
+  description:
+    'Sklep internetowy w Ruby on Rails - koszyk, zamówienia, konta użytkowników ze śledzeniem statusu i panel administracyjny.',
+}
+
+export default function Page({ children }) {
+  return <ProjectLayout title="Pixel Picture" date="2023-07-01">{children}</ProjectLayout>
+}
+
+![](@/images/pixelpicture.png)
+
+## Pixel Picture
+
+<Badges><Badge tech="rails" /><Badge tech="ruby" /><Badge tech="tailwind" /></Badges>
+
+Sklep internetowy z&nbsp;pełnym procesem zakupowym. Klient przegląda produkty, składa zamówienia i&nbsp;śledzi ich status, a&nbsp;właściciel sam prowadzi sklep z&nbsp;prostego panelu administracyjnego - bez pomocy programisty. [Zobacz pixelpicture.eu](https://pixelpicture.eu)
+
+### <SparkleIcon /> Jakie problemy rozwiązuje?
+
+- Cały proces zakupowy w&nbsp;jednym miejscu - od koszyka po historię zamówień
+- Konto użytkownika z&nbsp;możliwością śledzenia statusu zamówienia
+- Panel administracyjny, w&nbsp;którym łatwo dodać nowe produkty i&nbsp;zarządzać sklepem
+
+### <SparkleIcon /> Technologie
+
+- Ruby on Rails - cały backend
+- Tailwind CSS - wygląd strony
+- SQLite - baza danych
+- Stimulus.js - interaktywne elementy na froncie
+- Kamal - deploy na serwer
+
+### <SparkleIcon /> Jak wyglądała praca nad projektem?
+
+To projekt, w&nbsp;którym odpowiadałem za każdą warstwę aplikacji. Zaprojektowałem bazę danych i&nbsp;logikę zamówień, zbudowałem koszyk oraz konta użytkowników ze śledzeniem statusu zamówienia, a&nbsp;interaktywne elementy frontendu oparłem na Stimulusie.
+
+Osobnym kawałkiem pracy był panel administracyjny - właściciel sklepu sam dodaje produkty i&nbsp;obsługuje zamówienia, bez pomocy programisty. Całość wdrożyłem na serwer za pomocą Kamala, dzięki czemu kolejne wersje sklepu trafiają na produkcję jednym poleceniem.

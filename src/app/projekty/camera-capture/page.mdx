@@ -1,0 +1,80 @@
+import { SparkleIcon } from '@/components/SparkleIcon'
+import { ProjectLayout } from '@/components/ProjectLayout'
+import { Badge, Badges } from '@/components/Badge'
+
+export const metadata = {
+  title: 'Camera Capture - automatyzacja fotografii produktowej',
+  description:
+    'Narzędzie w Pythonie do zautomatyzowanej fotografii produktowej: sterowanie aparatem Canon, lokalne usuwanie tła przez AI, kadrowanie i logo - gotowe zdjęcie katalogowe w 7 sekund.',
+}
+
+export default function Page({ children }) {
+  return <ProjectLayout title="Camera Capture" date="2026-07-31">{children}</ProjectLayout>
+}
+
+![](@/images/camera-capture.jpg)
+
+## Camera Capture
+
+<Badges><Badge tech="python" /></Badges>
+
+Narzędzie do automatyzacji fotografii produktowej dla sklepu internetowego Trixbrix. Jedno wciśnięcie ENTER w&nbsp;terminalu: aparat Canon EOS M50 robi zdjęcie, AI lokalnie usuwa tło, produkt zostaje wyśrodkowany, w&nbsp;rogu pojawia się logo sklepu, a&nbsp;gotowy plik 3000×3000 ląduje na dysku. Cały cykl trwa około siedmiu sekund - między zdjęciami wystarczy obrócić produkt na stoliku obrotowym. [Zobacz repo na GitHubie](https://github.com/Xeross99/camera-capture)
+
+### <SparkleIcon /> Jakie problemy rozwiązuje?
+
+- Każdy nowy produkt w&nbsp;sklepie potrzebuje zdjęć katalogowych - białe tło, wykadrowanie, logo. Ręczna obróbka partii produktów w&nbsp;Photoshopie zajmowała godziny, teraz to kwestia sekund
+- Usuwanie tła działa w&nbsp;całości lokalnie na CPU - bez GPU, bez płatnych chmurowych API, zdjęcia nie opuszczają komputera
+- Spójny format każdego zdjęcia: wyśrodkowany produkt, stały margines, wymiar 3000×3000
+- Surowe zdjęcie z&nbsp;aparatu zapisuje się obok przetworzonego - jeśli automat się pomyli, oryginał czeka na dysku
+- Opcjonalny upload prosto do panelu sklepu - galeria produktu aktualizuje się na żywo podczas sesji zdjęciowej
+
+### <SparkleIcon /> Zobacz w&nbsp;akcji
+
+Po lewej surowe zdjęcie prosto z&nbsp;matrycy aparatu, po prawej to, co narzędzie zapisuje na dysku: 3000×3000, białe tło, wyśrodkowany produkt, logo. Trzy ujęcia z&nbsp;jednej sesji, która trwała około 20 sekund.
+
+<div className="grid grid-cols-2 items-center gap-x-4 gap-y-2">
+  ![](@/images/camera-capture-1-raw.jpg)
+
+  ![](@/images/camera-capture-1.jpg)
+
+  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Przed</p>
+
+  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Po</p>
+</div>
+
+<div className="grid grid-cols-2 items-center gap-x-4 gap-y-2">
+  ![](@/images/camera-capture-2-raw.jpg)
+
+  ![](@/images/camera-capture-2.jpg)
+
+  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Przed</p>
+
+  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Po</p>
+</div>
+
+<div className="grid grid-cols-2 items-center gap-x-4 gap-y-2">
+  ![](@/images/camera-capture-3-raw.jpg)
+
+  ![](@/images/camera-capture-3.jpg)
+
+  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Przed</p>
+
+  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Po</p>
+</div>
+
+### <SparkleIcon /> Technologie
+
+- Python 3.12 - cały pipeline
+- python-gphoto2 - sterowanie aparatem Canon i&nbsp;pobieranie zdjęć przez USB
+- rembg (model u2netp) + onnxruntime - lokalne usuwanie tła przez AI
+- Pillow, numpy i&nbsp;scipy - maski, kadrowanie, wyostrzanie, nakładanie logo
+- rich - interaktywny interfejs w&nbsp;terminalu
+- requests + python-dotenv - opcjonalny upload do towarzyszącej aplikacji Rails
+
+### <SparkleIcon /> Jak wyglądała praca nad projektem?
+
+Punktem wyjścia był konkretny, powtarzalny problem: każda partia nowych produktów w&nbsp;sklepie oznaczała sesję zdjęciową i&nbsp;długą, ręczną obróbkę w&nbsp;Photoshopie. Chciałem, żeby cała pętla - zdjęcie, obróbka, zapis - sprowadzała się do jednego klawisza.
+
+Najciekawszą częścią okazało się dopracowanie masek z&nbsp;modelu AI. Surowa maska łapała drobne artefakty - pyłki, krawędzie tła - więc filtruję je po powierzchni. Osobnym wyzwaniem były cienie prześwitujące przez otwory w&nbsp;produkcie: te rozjaśniam do bieli, ale sam produkt zostawiam nietknięty. Wyostrzanie działa selektywnie tylko na produkcie, nigdy na tle - dzięki temu wokół krawędzi nie pojawia się jasna obwódka, która zdradzałaby, że tło było wycinane.
+
+Pipeline pracuje na pełnej rozdzielczości matrycy (24 Mpix) w&nbsp;jednym przebiegu, z&nbsp;jednym finalnym skalowaniem, i&nbsp;działa w&nbsp;całości offline. Na koniec dodałem integrację z&nbsp;aplikacją Rails obsługującą katalog sklepu: zaraz po naciśnięciu migawki narzędzie zgłasza nowe zdjęcie do panelu sklepu (od razu pojawia się tam miejsce na nie), a&nbsp;po zakończeniu obróbki wysyła gotowy plik przez API - podgląd sesji w&nbsp;sklepie aktualizuje się na żywo.

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import michal from '@/images/michal.jpeg'
 
 import { IconLink } from '@/components/IconLink'
-import { RevealFx } from '@/once-ui/components/RevealFx'
 
 function BookIcon(props) {
   return (
@@ -31,14 +30,14 @@ function EmailIcon(props) {
 
 export function Intro() {
   return (
-    <RevealFx speed="medium" delay={0} translateY={0}>
+    <>
       <li className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0">
-        <Image className="aspect-4/5 w-52 flex-none rounded-2xl object-cover object-left" src={michal} alt="" />
+        <Image className="aspect-4/5 w-52 flex-none rounded-2xl object-cover object-left" src={michal} alt="" priority placeholder="blur" />
         <div className="max-w-xl flex-auto">
           <h3 className="text-lg/8 font-semibold tracking-tight text-white">Michał Krzysteczko</h3>
-          <p className="text-base/7 text-gray-300">Tworzę strony internetowe i aplikacje webowe</p>
+          <p className="text-base/7 text-gray-300">Web developer - strony internetowe, sklepy i&nbsp;aplikacje webowe</p>
           <p className="mt-6 text-base/7 text-gray-300">
-          Cześć! Zajmuję się budowaniem stron i aplikacji webowych. Robię wszystko od A do Z - od projektu, przez kod, po wrzucenie na serwer. Poniżej kilka moich ostatnich projektów.
+          Cześć! Buduję szybkie strony internetowe, sklepy i&nbsp;aplikacje webowe w&nbsp;Next.js i&nbsp;Ruby on Rails. Prowadzę projekty od A do Z - od pomysłu i&nbsp;projektu, przez kod, po wdrożenie na serwer. Poniżej znajdziesz moje ostatnie realizacje.
           </p>
         </div>
       </li>
@@ -53,6 +52,6 @@ export function Intro() {
           E-Mail
         </IconLink>
       </div>
-    </RevealFx>
+    </>
   )
 }

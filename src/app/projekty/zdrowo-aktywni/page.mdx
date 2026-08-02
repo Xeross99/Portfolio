@@ -1,0 +1,38 @@
+import { SparkleIcon } from '@/components/SparkleIcon'
+import { ProjectLayout } from '@/components/ProjectLayout'
+import { Badge, Badges } from '@/components/Badge'
+
+export const metadata = {
+  title: 'Zdrowo Aktywni - portal o zdrowym stylu życia',
+  description:
+    'Portal o zdrowym stylu życia w Next.js - blog z artykułami, strefa współpracy dla firm i strona kontaktowa.',
+}
+
+export default function Page({ children }) {
+  return <ProjectLayout title="Zdrowo Aktywni" date="2024-12-30">{children}</ProjectLayout>
+}
+
+![](@/images/zdrowoaktywni.png)
+
+## Zdrowo Aktywni
+
+<Badges><Badge tech="nextjs" /><Badge tech="tailwind" /></Badges>
+
+Portal o&nbsp;zdrowym stylu życia z&nbsp;blogiem, strefą współpracy dla firm i&nbsp;stroną kontaktową. Zaprojektowany tak, żeby czytelnicy łatwo trafiali do artykułów, a&nbsp;potencjalni partnerzy od razu wiedzieli, jak nawiązać współpracę. [Zobacz zdrowo-aktywni.pl](https://zdrowo-aktywni.pl)
+
+### <SparkleIcon /> Co jest na stronie?
+
+- Blog z&nbsp;artykułami o&nbsp;zdrowiu i&nbsp;aktywności
+- Sekcja dla firm, które chcą nawiązać współpracę
+- Strona kontaktowa
+
+### <SparkleIcon /> Technologie
+
+- Next.js - cała strona
+- Tailwind CSS - wygląd
+
+### <SparkleIcon /> Jak wyglądała praca nad projektem?
+
+Najważniejsi na tej stronie są czytelnicy bloga, więc postawiłem na czytelny układ artykułów, prostą nawigację i&nbsp;szybkie ładowanie - tak, żeby nic nie stało między czytelnikiem a&nbsp;treścią.
+
+Osobno zaprojektowana strefa współpracy prowadzi firmy zainteresowane wspólnymi projektami prosto do kontaktu. Dzięki temu jedna strona pracuje jednocześnie na dwie grupy odbiorców: czytelników i&nbsp;partnerów biznesowych.

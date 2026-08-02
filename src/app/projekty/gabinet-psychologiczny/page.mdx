@@ -1,0 +1,40 @@
+import { SparkleIcon } from '@/components/SparkleIcon'
+import { ProjectLayout } from '@/components/ProjectLayout'
+import { Badge, Badges } from '@/components/Badge'
+
+export const metadata = {
+  title: 'Gabinet psychologiczno-seksuologiczny - strona z zapisami online',
+  description:
+    'Strona internetowa gabinetu psychologicznego w Next.js - wierne odwzorowanie projektu graficznego, formularz zapisów i sekcja artykułów edukacyjnych.',
+}
+
+export default function Page({ children }) {
+  return <ProjectLayout title="Gabinet psychologiczno-seksuologiczny" date="2025-07-31">{children}</ProjectLayout>
+}
+
+![](@/images/magda.png)
+
+## Gabinet psychologiczno-seksuologiczny
+
+<Badges><Badge tech="nextjs" /><Badge tech="tailwind" /></Badges>
+
+Strona internetowa gabinetu psychologiczno-seksuologicznego. Projekt graficzny przygotował designer klientki, a&nbsp;moim zadaniem było wiernie przenieść go do szybkiej, działającej strony z&nbsp;formularzem zapisów i&nbsp;sekcją artykułów budujących zaufanie pacjentów. [Zobacz magdalenakuznik.pl](https://magdalenakuznik.pl)
+
+### <SparkleIcon /> Jakie problemy rozwiązuje?
+
+- Pacjenci zapisują się przez formularz, a&nbsp;klientka dostaje wszystkie zgłoszenia w&nbsp;jednym miejscu
+- Sekcja z&nbsp;artykułami edukacyjnymi buduje zaufanie nowych odwiedzających
+- Strona dokładnie oddaje projekt graficzny od designera
+
+### <SparkleIcon /> Technologie
+
+- Next.js - cała strona
+- Tailwind CSS - wygląd
+- Google Sheets - formularz zapisów wysyła dane prosto do arkusza klientki
+- Vercel - hosting
+
+### <SparkleIcon /> Jak wyglądała praca nad projektem?
+
+Dostałem od klientki gotowy projekt graficzny i&nbsp;moim zadaniem było odwzorować go co do piksela - tak, żeby efekt końcowy wyglądał dokładnie jak wizja designera, a&nbsp;przy tym działał szybko na każdym urządzeniu.
+
+Formularz zapisów zbudowałem tak, żeby zgłoszenia pacjentów trafiały prosto do arkusza Google klientki - bez dodatkowych systemów, logowania i&nbsp;abonamentów. Do tego doszła sekcja artykułów edukacyjnych, dzięki której klientka buduje zaufanie osób odwiedzających stronę po raz pierwszy.

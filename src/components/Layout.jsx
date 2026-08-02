@@ -1,9 +1,10 @@
 import { useId } from 'react'
 import { Intro } from '@/components/Intro'
+import { ProjectFilterBar, ProjectFilterProvider } from '@/components/ProjectFilter'
 import { StarField } from '@/components/StarField'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
-function Timeline() {
+export function Timeline() {
   let id = useId()
 
   return (
@@ -67,14 +68,17 @@ function FixedSidebar({ main }) {
 export function Layout({ children }) {
   return (
     <>
-      <FixedSidebar main={<Intro />} />
+      <ProjectFilterProvider>
+        <FixedSidebar main={<Intro />} />
         <ThemeToggle />
         <div className="relative flex-auto">
           <Timeline />
-          <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
+          <ProjectFilterBar />
+          <main className="space-y-20 pt-10 pb-20 sm:space-y-32 sm:pt-16 sm:pb-32">
             {children}
           </main>
         </div>
+      </ProjectFilterProvider>
     </>
   )
 }

@@ -1,6 +1,5 @@
 import { IconLink } from '@/components/IconLink'
 import { StarField } from '@/components/StarField'
-import { RevealFx } from '@/once-ui/components/RevealFx'
 
 export default function NotFound() {
   return (
@@ -16,7 +15,7 @@ export default function NotFound() {
         <rect width="100%" height="100%" fill="url(#gradient)" />
       </svg>
       <StarField className="sm:-mt-16" />
-      <RevealFx speed="medium" delay={0} translateY={0}>
+      <div>
         <p className="font-display text-4xl/tight font-light text-white">404</p>
         <h1 className="mt-4 font-display text-xl/8 font-semibold text-white">
           Strona nie znaleziona
@@ -27,7 +26,7 @@ export default function NotFound() {
         <IconLink href="/" className="mt-4 max-w-fit mx-auto">
           Wróć do strony głównej
         </IconLink>
-      </RevealFx>
+      </div>
     </div>
   )
 }

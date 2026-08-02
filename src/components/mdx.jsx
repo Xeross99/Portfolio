@@ -1,12 +1,12 @@
 'use client'
 
-import { RevealFx } from '@/once-ui/components/RevealFx'
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
 import { FormattedDate } from '@/components/FormattedDate'
+import { useProjectFilter } from '@/components/ProjectFilter'
 
 export const a = function A({ href, children, ...props }) {
   const isExternal = href?.startsWith('http')
@@ -37,13 +37,11 @@ export const img = function Img(props) {
 
 function ContentWrapper({ className, ...props }) {
   return (
-    <RevealFx speed="medium" delay={0.5} translateY={0}>
-      <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-        <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
-          <div className={clsx('mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto', className,)} {...props} />
-        </div>
+    <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+      <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+        <div className={clsx('mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto', className,)} {...props} />
       </div>
-    </RevealFx>
+    </div>
   )
 }
 
@@ -68,7 +66,8 @@ function ArticleHeader({ id, date }) {
   )
 }
 
-export const article = function Article({ id, date, children }) {
+export const article = function Article({ id, date, type, children }) {
+  let filter = useProjectFilter()
   let heightRef = useRef(null)
   let [heightAdjustment, setHeightAdjustment] = useState(0)
 
@@ -91,7 +90,11 @@ export const article = function Article({ id, date, children }) {
     return () => {
       observer.disconnect()
     }
-  }, [])
+  }, [filter])
+
+  if (filter !== 'all' && type !== filter) {
+    return null
+  }
 
   return (
     <article id={id} className="scroll-mt-16" style={{ paddingBottom: `${heightAdjustment}px` }}>

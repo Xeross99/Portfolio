@@ -18,11 +18,30 @@ const monaSans = localFont({
 })
 
 export const metadata = {
-  title: 'Michał Krzysteczko - Strony internetowe i aplikacje webowe',
+  title: {
+    default: 'Michał Krzysteczko - Tworzenie stron internetowych i aplikacji webowych',
+    template: '%s - Michał Krzysteczko',
+  },
   description:
-    'Zajmuję się tworzeniem stron internetowych i aplikacji webowych. Głównie Next.js, Tailwind CSS i Ruby on Rails. Zobacz moje projekty.',
-  author: 'Michał Krzysteczko',
+    'Tworzę szybkie strony internetowe, sklepy i aplikacje webowe w Next.js i Ruby on Rails - od projektu, przez kod, po wdrożenie na serwer. Zobacz moje realizacje.',
+  keywords: [
+    'tworzenie stron internetowych',
+    'aplikacje webowe',
+    'sklepy internetowe',
+    'web developer',
+    'Next.js',
+    'Ruby on Rails',
+    'Tailwind CSS',
+  ],
+  authors: [{ name: 'Michał Krzysteczko' }],
   creator: 'Michał Krzysteczko',
+  openGraph: {
+    title: 'Michał Krzysteczko - Tworzenie stron internetowych i aplikacji webowych',
+    description:
+      'Szybkie strony internetowe, sklepy i aplikacje webowe w Next.js i Ruby on Rails - od projektu, przez kod, po wdrożenie.',
+    locale: 'pl_PL',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({ children }) {

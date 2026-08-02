@@ -1,0 +1,40 @@
+import { SparkleIcon } from '@/components/SparkleIcon'
+import { ProjectLayout } from '@/components/ProjectLayout'
+import { Badge, Badges } from '@/components/Badge'
+
+export const metadata = {
+  title: 'Trixbrix - sklep internetowy z torami kompatybilnymi z LEGO',
+  description:
+    'Sklep internetowy w Ruby on Rails dla producenta torów kolejkowych kompatybilnych z LEGO - setki produktów, sprzedaż w wielu walutach i wyszukiwarka z podpowiedziami.',
+}
+
+export default function Page({ children }) {
+  return <ProjectLayout title="Trixbrix - sklep z torami" date="2026-03-24">{children}</ProjectLayout>
+}
+
+![](@/images/trixbrix.png)
+
+## Trixbrix - sklep z&nbsp;torami
+
+<Badges><Badge tech="rails" /><Badge tech="ruby" /><Badge tech="tailwind" /></Badges>
+
+Sklep internetowy dla producenta zaawansowanych torów kolejkowych kompatybilnych z&nbsp;LEGO, sprzedającego klientom na całym świecie. Setki produktów - tory, automatyka, gotowe zestawy i&nbsp;akcesoria - w&nbsp;sklepie, który musi działać szybko i&nbsp;sprzedawać w&nbsp;wielu walutach. [Zobacz shop.trixbrix.eu](https://shop.trixbrix.eu)
+
+### <SparkleIcon /> Jakie problemy rozwiązuje?
+
+- Wygodna nawigacja po dużym katalogu produktów
+- Wyszukiwarka, która podpowiada jeszcze przed wpisaniem całej nazwy
+- Obsługa wielu walut, bo klienci są z&nbsp;różnych krajów
+- Cały sklep działa szybko nawet przy dużej liczbie produktów
+
+### <SparkleIcon /> Technologie
+
+- Ruby on Rails - cały backend i&nbsp;logika sklepu
+- Tailwind CSS - wygląd strony
+- Hotwire - interaktywne elementy bez ciężkiego JavaScriptu
+
+### <SparkleIcon /> Jak wyglądała praca nad projektem?
+
+Największym wyzwaniem była skala katalogu - przy setkach produktów nawigacja i&nbsp;wyszukiwarka muszą odpowiadać natychmiast. Dopracowałem podział na kategorie i&nbsp;dodałem wyszukiwarkę z&nbsp;podpowiedziami, która prowadzi klienta do właściwego produktu, zanim skończy wpisywać jego nazwę.
+
+Sklep sprzedaje klientom z&nbsp;całego świata, więc drugim ważnym tematem była obsługa wielu walut. Interfejs oparłem na Hotwire - strona reaguje jak aplikacja, ale bez ciężkiego JavaScriptu po stronie przeglądarki, co przekłada się na szybkie ładowanie nawet przy dużym katalogu produktów.
