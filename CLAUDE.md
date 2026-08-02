@@ -11,7 +11,7 @@ Next.js 14 portfolio site with MDX content. Projects have an index (home page) a
 ## Structure
 
 - `src/app/page.mdx` - Project index: all projects as MDX sections, newest first
-- `src/app/projekty/<slug>/page.mdx` - Project detail pages with full description and per-page SEO metadata
+- `src/app/projekty/<slug>/page.mdx` - Project detail pages with full description and per-page SEO metadata. Pages heavy on custom JSX can be plain `page.jsx` instead (see `camera-capture`) - `ProjectLayout` wraps children in the `typography` class, so plain HTML tags get the same prose styling as MDX. For click-to-zoom photos use `react-medium-image-zoom` directly (it ships `'use client'`).
 - `src/app/sitemap.js` / `src/app/robots.js` - SEO; sitemap has a static list of project slugs
 - `src/images/` - Project thumbnails (referenced as `@/images/filename.png`)
 - `src/components/` - Layout (index), ProjectLayout (detail), Intro, Badge, ProjectFilter, PhoneFrame, ProjectLink, mdx overrides, SparkleIcon, etc.
