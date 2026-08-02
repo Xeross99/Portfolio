@@ -56,43 +56,50 @@ export function ProjectFilterBar() {
   }, [])
 
   return (
-    <div ref={barRef} className="pointer-events-none sticky top-0 z-[60] pt-4">
-      <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-        <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
-          <div className="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
-            <div
-              className={clsx(
-                'inline-flex max-w-full flex-nowrap gap-1.5 rounded-2xl p-1.5 transition duration-300 ease-out',
-                stuck
-                  ? 'bg-gray-100/75 backdrop-blur-md dark:bg-gray-800/75'
-                  : 'bg-gray-100 dark:bg-gray-800',
-                hidden
-                  ? 'pointer-events-none -translate-y-2 scale-90 opacity-0'
-                  : 'pointer-events-auto',
-              )}
-            >
-              {filters.map((f) => (
-                <button
-                  key={f.value}
-                  type="button"
-                  onClick={() => setFilter(f.value)}
-                  className={clsx(
-                    'shrink-0 rounded-xl px-3 py-1 text-sm font-medium whitespace-nowrap transition',
-                    filter === f.value
-                      ? 'bg-sky-500 text-white'
-                      : 'text-gray-600 hover:bg-white dark:text-gray-300 dark:hover:bg-white/10',
-                  )}
-                >
-                  {f.shortLabel ? (
-                    <>
-                      <span className="xl:hidden">{f.shortLabel}</span>
-                      <span className="hidden xl:inline">{f.label}</span>
-                    </>
-                  ) : (
-                    f.label
-                  )}
-                </button>
-              ))}
+    <div ref={barRef} className="h-14">
+      <div
+        className={clsx(
+          'pointer-events-none z-[60] pt-4',
+          stuck && 'fixed inset-x-0 top-0',
+        )}
+      >
+        <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+          <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+            <div className="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
+              <div
+                className={clsx(
+                  'inline-flex max-w-full flex-nowrap gap-1.5 rounded-2xl p-1.5 transition duration-300 ease-out',
+                  stuck
+                    ? 'bg-gray-100/75 backdrop-blur-md dark:bg-gray-800/75'
+                    : 'bg-gray-100 dark:bg-gray-800',
+                  hidden
+                    ? 'pointer-events-none -translate-y-2 scale-90 opacity-0'
+                    : 'pointer-events-auto',
+                )}
+              >
+                {filters.map((f) => (
+                  <button
+                    key={f.value}
+                    type="button"
+                    onClick={() => setFilter(f.value)}
+                    className={clsx(
+                      'shrink-0 rounded-xl px-3 py-1 text-sm font-medium whitespace-nowrap transition',
+                      filter === f.value
+                        ? 'bg-sky-500 text-white'
+                        : 'text-gray-600 hover:bg-white dark:text-gray-300 dark:hover:bg-white/10',
+                    )}
+                  >
+                    {f.shortLabel ? (
+                      <>
+                        <span className="xl:hidden">{f.shortLabel}</span>
+                        <span className="hidden xl:inline">{f.label}</span>
+                      </>
+                    ) : (
+                      f.label
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
