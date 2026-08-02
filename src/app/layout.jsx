@@ -17,16 +17,6 @@ const monaSans = localFont({
   weight: '200 900',
 })
 
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  viewportFit: 'cover',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#030712' },
-  ],
-}
-
 export const metadata = {
   metadataBase: new URL('https://krzysteczko-m.pl'),
   alternates: {
