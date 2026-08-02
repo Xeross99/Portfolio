@@ -28,6 +28,10 @@ export const viewport = {
 }
 
 export const metadata = {
+  metadataBase: new URL('https://krzysteczko-m.pl'),
+  alternates: {
+    canonical: './',
+  },
   title: {
     default: 'Michał Krzysteczko - Tworzenie stron internetowych i aplikacji webowych',
     template: '%s - Michał Krzysteczko',
