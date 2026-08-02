@@ -29,6 +29,7 @@ export function ProjectFilterProvider({ children }) {
 export function ProjectFilterBar() {
   const { filter, setFilter } = useContext(FilterContext)
   const [hidden, setHidden] = useState(false)
+  const [stuck, setStuck] = useState(false)
   const barRef = useRef(null)
 
   useEffect(() => {
@@ -36,9 +37,12 @@ export function ProjectFilterBar() {
 
     const onScroll = () => {
       const y = window.scrollY
-      const stuck = barRef.current && barRef.current.getBoundingClientRect().top <= 0
+      const isStuck = barRef.current
+        ? barRef.current.getBoundingClientRect().top <= 0
+        : false
 
-      if (y > lastY && stuck) {
+      setStuck(isStuck)
+      if (y > lastY && isStuck) {
         setHidden(true)
       } else if (y < lastY) {
         setHidden(false)
@@ -46,6 +50,7 @@ export function ProjectFilterBar() {
       lastY = y
     }
 
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -57,7 +62,10 @@ export function ProjectFilterBar() {
           <div className="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
             <div
               className={clsx(
-                'inline-flex max-w-full flex-nowrap gap-1.5 overflow-x-auto rounded-2xl bg-gray-100/75 p-1.5 backdrop-blur-md transition duration-300 ease-out [scrollbar-width:none] dark:bg-gray-800/75 [&::-webkit-scrollbar]:hidden',
+                'inline-flex max-w-full flex-nowrap gap-1.5 overflow-x-auto rounded-2xl p-1.5 transition duration-300 ease-out [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
+                stuck
+                  ? 'bg-gray-100/75 backdrop-blur-md dark:bg-gray-800/75'
+                  : 'bg-gray-100 dark:bg-gray-800',
                 hidden
                   ? 'pointer-events-none -translate-y-2 scale-90 opacity-0'
                   : 'pointer-events-auto translate-y-0 scale-100 opacity-100',
