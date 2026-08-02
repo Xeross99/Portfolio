@@ -1,6 +1,13 @@
 import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
+import { ZoomImage } from '@/components/ZoomImage'
+import raw1 from '@/images/camera-capture-1-raw.jpg'
+import final1 from '@/images/camera-capture-1.jpg'
+import raw2 from '@/images/camera-capture-2-raw.jpg'
+import final2 from '@/images/camera-capture-2.jpg'
+import raw3 from '@/images/camera-capture-3-raw.jpg'
+import final3 from '@/images/camera-capture-3.jpg'
 
 export const metadata = {
   title: 'Camera Capture - automatyzacja fotografii produktowej',
@@ -30,36 +37,24 @@ Narzędzie do automatyzacji fotografii produktowej dla sklepu internetowego Trix
 
 ### <SparkleIcon /> Zobacz w&nbsp;akcji
 
-Po lewej surowe zdjęcie prosto z&nbsp;matrycy aparatu, po prawej to, co narzędzie zapisuje na dysku: 3000×3000, białe tło, wyśrodkowany produkt, logo. Trzy ujęcia z&nbsp;jednej sesji, która trwała około 20 sekund.
+Po lewej surowe zdjęcie prosto z&nbsp;matrycy aparatu, po prawej to, co narzędzie zapisuje na dysku: 3000×3000, białe tło, wyśrodkowany produkt, logo. Trzy ujęcia z&nbsp;jednej sesji, która trwała około 20 sekund. Kliknij zdjęcie, żeby je powiększyć.
 
-<div className="grid grid-cols-2 items-center gap-x-4 gap-y-2">
-  ![](@/images/camera-capture-1-raw.jpg)
+<div className="not-prose grid grid-cols-2 gap-x-4 gap-y-3">
+  <p className="my-0 text-center text-sm font-medium text-gray-500 dark:text-gray-400">Przed</p>
 
-  ![](@/images/camera-capture-1.jpg)
+  <p className="my-0 text-center text-sm font-medium text-gray-500 dark:text-gray-400">Po</p>
 
-  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Przed</p>
+  <ZoomImage image={raw1} alt="Surowe zdjęcie produktu prosto z aparatu" />
 
-  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Po</p>
-</div>
+  <ZoomImage image={final1} alt="Gotowe zdjęcie katalogowe z białym tłem i logo" />
 
-<div className="grid grid-cols-2 items-center gap-x-4 gap-y-2">
-  ![](@/images/camera-capture-2-raw.jpg)
+  <ZoomImage image={raw2} alt="Surowe zdjęcie produktu prosto z aparatu, drugie ujęcie" />
 
-  ![](@/images/camera-capture-2.jpg)
+  <ZoomImage image={final2} alt="Gotowe zdjęcie katalogowe, drugie ujęcie" />
 
-  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Przed</p>
+  <ZoomImage image={raw3} alt="Surowe zdjęcie produktu pod kątem" />
 
-  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Po</p>
-</div>
-
-<div className="grid grid-cols-2 items-center gap-x-4 gap-y-2">
-  ![](@/images/camera-capture-3-raw.jpg)
-
-  ![](@/images/camera-capture-3.jpg)
-
-  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Przed</p>
-
-  <p className="not-prose my-0 text-center text-sm text-gray-500 dark:text-gray-400">Po</p>
+  <ZoomImage image={final3} alt="Gotowe zdjęcie katalogowe w kadrze trzy czwarte" />
 </div>
 
 ### <SparkleIcon /> Technologie

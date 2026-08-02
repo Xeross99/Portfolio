@@ -26,6 +26,7 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-medium-image-zoom": "^5.4.8",
     "recma-import-images": "^0.0.3",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",

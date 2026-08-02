@@ -9,3 +9,12 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-mona-sans);
 }
+
+/* react-medium-image-zoom: dark overlay in both themes */
+[data-rmiz-modal-overlay='hidden'] {
+  background-color: rgb(3 7 18 / 0);
+}
+
+[data-rmiz-modal-overlay='visible'] {
+  background-color: rgb(3 7 18 / 0.9);
+}
