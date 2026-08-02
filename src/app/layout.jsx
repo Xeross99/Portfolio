@@ -24,11 +24,11 @@ export const metadata = {
     canonical: './',
   },
   title: {
-    default: 'Michał Krzysteczko - Tworzenie stron internetowych i aplikacji webowych',
+    default: 'Michał Krzysteczko - Strony internetowe, sklepy i aplikacje',
     template: '%s - Michał Krzysteczko',
   },
   description:
-    'Tworzę szybkie strony internetowe, sklepy i aplikacje webowe w Next.js i Ruby on Rails - od projektu, przez kod, po wdrożenie na serwer. Zobacz moje realizacje.',
+    'Strona internetowa, sklep czy aplikacja? Buduję je od pomysłu po wdrożenie - szybkie, dopracowane i widoczne w Google. Zobacz, co mogę zrobić dla Twojego biznesu.',
   keywords: [
     'tworzenie stron internetowych',
     'aplikacje webowe',
@@ -41,9 +41,9 @@ export const metadata = {
   authors: [{ name: 'Michał Krzysteczko' }],
   creator: 'Michał Krzysteczko',
   openGraph: {
-    title: 'Michał Krzysteczko - Tworzenie stron internetowych i aplikacji webowych',
+    title: 'Michał Krzysteczko - Strony internetowe, sklepy i aplikacje',
     description:
-      'Szybkie strony internetowe, sklepy i aplikacje webowe w Next.js i Ruby on Rails - od projektu, przez kod, po wdrożenie.',
+      'Strona internetowa, sklep czy aplikacja? Buduję je od pomysłu po wdrożenie - szybkie, dopracowane i widoczne w Google.',
     locale: 'pl_PL',
     type: 'website',
   },
