@@ -62,7 +62,7 @@ export function ProjectFilterBar() {
           <div className="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
             <div
               className={clsx(
-                'inline-flex max-w-full flex-nowrap gap-1.5 overflow-x-auto rounded-2xl p-1.5 transition duration-300 ease-out [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
+                'inline-flex max-w-full flex-nowrap gap-1.5 rounded-2xl p-1.5 transition duration-300 ease-out',
                 stuck
                   ? 'bg-gray-100/75 backdrop-blur-md dark:bg-gray-800/75'
                   : 'bg-gray-100 dark:bg-gray-800',
