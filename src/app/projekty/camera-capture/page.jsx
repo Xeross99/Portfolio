@@ -4,6 +4,7 @@ import 'react-medium-image-zoom/dist/styles.css'
 import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
+import { CoverImage } from '@/components/Article'
 import cover from '@/images/camera-capture.jpg'
 import raw1 from '@/images/camera-capture-1-raw.jpg'
 import final1 from '@/images/camera-capture-1.jpg'
@@ -30,15 +31,11 @@ export const metadata = {
 export default function Page() {
   return (
     <ProjectLayout title="Camera Capture" date="2026-07-31">
-      <div className="relative overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900">
-        <Image
-          src={cover}
-          alt="Stanowisko do zdjęć produktowych: aparat Canon na statywie i laptop z uruchomionym narzędziem"
-          sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
-          priority
-        />
-        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset dark:ring-white/10" />
-      </div>
+      <CoverImage
+        image={cover}
+        alt="Stanowisko do zdjęć produktowych: aparat Canon na statywie i laptop z uruchomionym narzędziem"
+        priority
+      />
 
       <h2>Camera Capture</h2>
 

@@ -8,33 +8,6 @@ import clsx from 'clsx'
 import { FormattedDate } from '@/components/FormattedDate'
 import { useProjectFilter } from '@/components/ProjectFilter'
 
-export const a = function A({ href, children, ...props }) {
-  const isExternal = href?.startsWith('http')
-  
-  if (isExternal) {
-    return (
-      <a href={href} target="_blank" {...props}>
-        {children}
-      </a>
-    )
-  } else {
-    return (
-      <Link href={href} {...props}>
-        {children}
-      </Link>
-    )
-  }
-}
-
-export const img = function Img(props) {
-  return (
-    <div className="relative overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900">
-      <Image alt="" sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw" {...props} />
-      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset dark:ring-white/10" />
-    </div>
-  )
-}
-
 function ContentWrapper({ className, ...props }) {
   return (
     <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
@@ -66,7 +39,7 @@ function ArticleHeader({ id, date }) {
   )
 }
 
-export const article = function Article({ id, date, type, children }) {
+export function Article({ id, date, type, children }) {
   let filter = useProjectFilter()
   let heightRef = useRef(null)
   let [heightAdjustment, setHeightAdjustment] = useState(0)
@@ -100,7 +73,7 @@ export const article = function Article({ id, date, type, children }) {
     <article id={id} className="scroll-mt-16" style={{ paddingBottom: `${heightAdjustment}px` }}>
       <div ref={heightRef}>
         <ArticleHeader id={id} date={date} />
-        <ContentWrapper className="typography" data-mdx-content>
+        <ContentWrapper className="typography">
           {children}
         </ContentWrapper>
       </div>
@@ -108,12 +81,16 @@ export const article = function Article({ id, date, type, children }) {
   )
 }
 
-export const code = function Code({ highlightedCode, ...props }) {
-  if (highlightedCode) {
-    return (
-      <code {...props} dangerouslySetInnerHTML={{ __html: highlightedCode }} />
-    )
-  }
-
-  return <code {...props} />
+export function CoverImage({ image, alt = '', ...props }) {
+  return (
+    <div className="relative overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900">
+      <Image
+        alt={alt}
+        src={image}
+        sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
+        {...props}
+      />
+      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset dark:ring-white/10" />
+    </div>
+  )
 }
