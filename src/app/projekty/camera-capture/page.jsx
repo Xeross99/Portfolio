@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
 import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
@@ -89,27 +88,30 @@ export default function Page() {
         sesji, która trwała około 20 sekund. Kliknij zdjęcie, żeby je powiększyć.
       </p>
 
-      <div className="not-prose grid grid-cols-2 gap-x-4 gap-y-3">
-        <p className="my-0 text-center text-sm font-medium text-gray-500 dark:text-gray-400">
-          Przed
-        </p>
-        <p className="my-0 text-center text-sm font-medium text-gray-500 dark:text-gray-400">Po</p>
-        {gallery.map((photo) => (
-          <div
-            key={photo.alt}
-            className="overflow-hidden rounded-xl bg-gray-50 ring-1 ring-gray-900/10 ring-inset dark:bg-gray-900 dark:ring-white/10"
-          >
-            <Zoom zoomMargin={16}>
+      <PhotoGallery>
+        <div className="not-prose grid grid-cols-2 gap-x-4 gap-y-3">
+          <p className="my-0 text-center text-sm font-medium text-gray-500 dark:text-gray-400">
+            Przed
+          </p>
+          <p className="my-0 text-center text-sm font-medium text-gray-500 dark:text-gray-400">
+            Po
+          </p>
+          {gallery.map((photo) => (
+            <Zoomable
+              key={photo.alt}
+              image={photo.image}
+              className="overflow-hidden rounded-xl bg-gray-50 ring-1 ring-gray-900/20 ring-inset dark:bg-gray-900 dark:ring-white/15"
+            >
               <Image
                 src={photo.image}
                 alt={photo.alt}
                 className="h-auto w-full"
                 sizes="(min-width: 1024px) 18rem, 45vw"
               />
-            </Zoom>
-          </div>
-        ))}
-      </div>
+            </Zoomable>
+          ))}
+        </div>
+      </PhotoGallery>
 
       <h3>
         <SparkleIcon /> Technologie

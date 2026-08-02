@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import clsx from 'clsx'
 import { Providers } from '@/app/providers'
 import '@/styles/tailwind.css'
+import 'react-photo-view/dist/react-photo-view.css'
 
 const inter = Inter({
   subsets: ['latin'],

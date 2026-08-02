@@ -25,7 +25,7 @@ Next.js 14 portfolio site, plain JSX views (no MDX). Projects have an index (hom
 - `PhoneFrame` (`src/components/PhoneFrame.jsx`) - realistic phone frame (from the Tailwind Plus Pocket template) used instead of a flat screenshot for mobile apps; takes `image` (static import) and `className` for sizing.
 - `ProjectLink` (`src/components/ProjectLink.jsx`) - "Zobacz szczegóły" arrow link used on the index.
 - `ProjectLayout` (`src/components/ProjectLayout.jsx`) - detail page shell: fixed sidebar with Intro (hidden on mobile - detail pages start with content), Timeline dashes, date marker, back link.
-- For click-to-zoom photos use `react-medium-image-zoom` directly (it ships `'use client'`); dark overlay override lives in `src/styles/tailwind.css`.
+- `PhotoGallery` / `Zoomable` (`src/components/PhotoGallery.jsx`) - click-to-zoom photos via `react-photo-view` (same pattern as the Zdrowo_aktywni project). One `PhotoGallery` around a set of `Zoomable`s groups them into a swipeable gallery. Library CSS is imported in `src/app/layout.jsx`.
 - Root metadata in `src/app/layout.jsx` sets `metadataBase`, per-route canonical URLs and a title template (`%s - Michał Krzysteczko`); detail pages export their own `metadata`.
 
 ## Adding a new project
