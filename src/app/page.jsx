@@ -104,7 +104,7 @@ export default function Page() {
         <CoverImage image={trixbrix} alt="Sklep internetowy Trixbrix" />
 
         <h2>
-          <a href="#trixbrix">Trixbrix - sklep z&nbsp;torami</a>
+          <a href="#trixbrix">Trixbrix</a>
         </h2>
 
         <Badges>

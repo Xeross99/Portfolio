@@ -34,17 +34,22 @@ export function ProjectFilterBar() {
 
   useEffect(() => {
     let lastY = window.scrollY
+    let downDistance = 0
 
     const onScroll = () => {
       const y = window.scrollY
+      const delta = y - lastY
       const isStuck = barRef.current
         ? barRef.current.getBoundingClientRect().top <= 0
         : false
 
       setStuck(isStuck)
-      if (y > lastY && isStuck) {
-        setHidden(true)
-      } else if (y < lastY) {
+      if (delta > 0 && isStuck) {
+        // ignore tiny browser-initiated adjustments (e.g. rubber-band settle)
+        downDistance += delta
+        if (downDistance > 24) setHidden(true)
+      } else if (delta < 0) {
+        downDistance = 0
         setHidden(false)
       }
       lastY = y

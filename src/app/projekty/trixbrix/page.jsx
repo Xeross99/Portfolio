@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <ProjectLayout title="Trixbrix - sklep z torami" date="2026-03-24">
+    <ProjectLayout title="Trixbrix" date="2026-03-24">
       <CoverImage image={trixbrix} alt="Sklep internetowy Trixbrix" priority />
 
-      <h2>Trixbrix - sklep z&nbsp;torami</h2>
+      <h2>Trixbrix</h2>
 
       <Badges>
         <Badge tech="rails" />
