@@ -18,7 +18,7 @@ export default function Page() {
       <Article id="camera-capture" date="2026-07-31" type="app">
         <CoverImage
           image={cameraCapture}
-          alt="Stanowisko do zdjęć produktowych: aparat Canon na statywie i laptop z uruchomionym narzędziem"
+          alt="Stanowisko do zdjęć produktowych: aparat Canon na ramieniu i laptop z uruchomioną aplikacją"
         />
 
         <h2>
@@ -30,10 +30,12 @@ export default function Page() {
         </Badges>
 
         <p>
-          Narzędzie do automatyzacji fotografii produktowej dla sklepu internetowego. Jedno
-          wciśnięcie ENTER w&nbsp;terminalu: aparat Canon robi zdjęcie, AI lokalnie usuwa tło,
-          produkt zostaje wyśrodkowany, w&nbsp;rogu pojawia się logo sklepu, a&nbsp;gotowy plik
-          3000×3000 ląduje na dysku. Cały cykl trwa około siedmiu sekund.
+          Aplikacja desktopowa do automatyzacji fotografii produktowej dla
+          sklepu internetowego. Na ekranie podgląd na żywo z&nbsp;aparatu Canon,
+          a&nbsp;jedno wciśnięcie ENTER uruchamia cały cykl: zdjęcie, AI
+          lokalnie usuwa tło, produkt zostaje wyśrodkowany, w&nbsp;rogu pojawia
+          się logo sklepu, a&nbsp;gotowy plik 3000×3000 ląduje na dysku
+          i&nbsp;w&nbsp;panelu sklepu. Cały cykl trwa około siedmiu sekund.
         </p>
 
         <h3>
@@ -42,15 +44,23 @@ export default function Page() {
 
         <ul>
           <li>
-            Zdjęcia katalogowe bez ręcznej obróbki w&nbsp;Photoshopie - godziny pracy zamienione na
-            sekundy
+            Zdjęcia katalogowe bez ręcznej obróbki w&nbsp;Photoshopie - godziny
+            pracy zamienione na sekundy
           </li>
-          <li>Usuwanie tła działa lokalnie na CPU - bez płatnych chmurowych API</li>
-          <li>Spójny format każdego zdjęcia: białe tło, wyśrodkowany produkt, logo</li>
           <li>
-            Opcjonalny upload prosto do panelu sklepu - galeria produktu aktualizuje się na żywo
-            podczas sesji
+            Podgląd na żywo z&nbsp;siatką - kadr widać przed zrobieniem zdjęcia
           </li>
+          <li>
+            Usuwanie tła działa lokalnie na CPU - bez płatnych chmurowych API
+          </li>
+          <li>
+            Spójny format każdego zdjęcia: białe tło, wyśrodkowany produkt, logo
+          </li>
+          <li>
+            Sesje i&nbsp;zdjęcia synchronizowane z&nbsp;panelem sklepu - galeria
+            produktu aktualizuje się na żywo
+          </li>
+          <li>Działa na macOS i&nbsp;Windows</li>
         </ul>
 
         <ProjectLink href="/projekty/camera-capture" />
@@ -76,11 +86,12 @@ export default function Page() {
         </Badges>
 
         <p>
-          Aplikacja do koordynowania jednorazowych zleceń w&nbsp;zespole. Organizator publikuje
-          wydarzenie, pracownicy zapisują się jednym kliknięciem, a&nbsp;system sam pilnuje limitu
-          miejsc, listy rezerwowej i&nbsp;pierwszeństwa zapisów - koniec z&nbsp;chaosem na
-          grupowych czatach. Działa w&nbsp;przeglądarce jako PWA, a&nbsp;wersja mobilna zbudowana
-          w&nbsp;Expo przechodzi testy w&nbsp;Google Play.
+          Aplikacja do koordynowania jednorazowych zleceń w&nbsp;zespole.
+          Organizator publikuje wydarzenie, pracownicy zapisują się jednym
+          kliknięciem, a&nbsp;system sam pilnuje limitu miejsc, listy rezerwowej
+          i&nbsp;pierwszeństwa zapisów - koniec z&nbsp;chaosem na grupowych
+          czatach. Działa w&nbsp;przeglądarce jako PWA, a&nbsp;wersja mobilna
+          zbudowana w&nbsp;Expo przechodzi testy w&nbsp;Google Play.
         </p>
 
         <h3>
@@ -88,11 +99,17 @@ export default function Page() {
         </h3>
 
         <ul>
-          <li>Koniec z&nbsp;kombinowaniem na grupowych czatach kto się zapisał, a&nbsp;kto nie</li>
-          <li>Aplikacja sama informuje, gdy zwolni się miejsce - bez przeklikiwania</li>
           <li>
-            Do wyboru: PWA w&nbsp;przeglądarce albo aplikacja mobilna z&nbsp;Google Play (na razie
-            w&nbsp;wersji testowej)
+            Koniec z&nbsp;kombinowaniem na grupowych czatach kto się zapisał,
+            a&nbsp;kto nie
+          </li>
+          <li>
+            Aplikacja sama informuje, gdy zwolni się miejsce - bez
+            przeklikiwania
+          </li>
+          <li>
+            Do wyboru: PWA w&nbsp;przeglądarce albo aplikacja mobilna
+            z&nbsp;Google Play (na razie w&nbsp;wersji testowej)
           </li>
           <li>Logowanie kodem z&nbsp;maila zamiast wymyślania hasła</li>
         </ul>
@@ -114,10 +131,11 @@ export default function Page() {
         </Badges>
 
         <p>
-          Sklep internetowy dla producenta zaawansowanych torów kolejkowych kompatybilnych
-          z&nbsp;LEGO, sprzedającego klientom na całym świecie. Setki produktów - tory, automatyka,
-          gotowe zestawy i&nbsp;akcesoria - w&nbsp;sklepie, który musi działać szybko
-          i&nbsp;sprzedawać w&nbsp;wielu walutach.
+          Sklep internetowy dla producenta zaawansowanych torów kolejkowych
+          kompatybilnych z&nbsp;LEGO, sprzedającego klientom na całym świecie.
+          Setki produktów - tory, automatyka, gotowe zestawy i&nbsp;akcesoria -
+          w&nbsp;sklepie, który musi działać szybko i&nbsp;sprzedawać
+          w&nbsp;wielu walutach.
         </p>
 
         <h3>
@@ -126,7 +144,9 @@ export default function Page() {
 
         <ul>
           <li>Wygodna nawigacja po dużym katalogu produktów</li>
-          <li>Wyszukiwarka, która podpowiada jeszcze przed wpisaniem całej nazwy</li>
+          <li>
+            Wyszukiwarka, która podpowiada jeszcze przed wpisaniem całej nazwy
+          </li>
           <li>Obsługa wielu walut, bo klienci są z&nbsp;różnych krajów</li>
           <li>Cały sklep działa szybko nawet przy dużej liczbie produktów</li>
         </ul>
@@ -135,7 +155,10 @@ export default function Page() {
       </Article>
 
       <Article id="pomoc-drogowa" date="2026-03-14" type="www">
-        <CoverImage image={rokita} alt="Strona internetowa firmy pomocy drogowej" />
+        <CoverImage
+          image={rokita}
+          alt="Strona internetowa firmy pomocy drogowej"
+        />
 
         <h2>
           <a href="#pomoc-drogowa">Pomoc drogowa i&nbsp;mechanika</a>
@@ -147,9 +170,10 @@ export default function Page() {
         </Badges>
 
         <p>
-          Strona internetowa dla firmy świadczącej pomoc drogową. Kierowca w&nbsp;nagłej sytuacji
-          musi w&nbsp;kilka sekund znaleźć numer telefonu - najczęściej z&nbsp;komórki, nierzadko
-          na słabym zasięgu. Dlatego strona jest błyskawiczna, zaprojektowana mobile-first
+          Strona internetowa dla firmy świadczącej pomoc drogową. Kierowca
+          w&nbsp;nagłej sytuacji musi w&nbsp;kilka sekund znaleźć numer telefonu
+          - najczęściej z&nbsp;komórki, nierzadko na słabym zasięgu. Dlatego
+          strona jest błyskawiczna, zaprojektowana mobile-first
           i&nbsp;zoptymalizowana pod lokalne wyniki Google.
         </p>
 
@@ -161,17 +185,25 @@ export default function Page() {
           <li>Numer telefonu widoczny od razu - bez szukania</li>
           <li>Ładuje się błyskawicznie, nawet na słabym zasięgu</li>
           <li>Mapa pokazuje zasięg działania firmy</li>
-          <li>Strona pojawia się w&nbsp;Google, gdy ktoś szuka pomocy w&nbsp;okolicy</li>
+          <li>
+            Strona pojawia się w&nbsp;Google, gdy ktoś szuka pomocy
+            w&nbsp;okolicy
+          </li>
         </ul>
 
         <ProjectLink href="/projekty/pomoc-drogowa" />
       </Article>
 
       <Article id="gabinet-psychologiczny" date="2025-07-31" type="www">
-        <CoverImage image={magda} alt="Strona internetowa gabinetu psychologiczno-seksuologicznego" />
+        <CoverImage
+          image={magda}
+          alt="Strona internetowa gabinetu psychologiczno-seksuologicznego"
+        />
 
         <h2>
-          <a href="#gabinet-psychologiczny">Gabinet psychologiczno-seksuologiczny</a>
+          <a href="#gabinet-psychologiczny">
+            Gabinet psychologiczno-seksuologiczny
+          </a>
         </h2>
 
         <Badges>
@@ -180,10 +212,11 @@ export default function Page() {
         </Badges>
 
         <p>
-          Strona internetowa gabinetu psychologiczno-seksuologicznego. Projekt graficzny
-          przygotował designer klientki, a&nbsp;moim zadaniem było wiernie przenieść go do
-          szybkiej, działającej strony z&nbsp;formularzem zapisów i&nbsp;sekcją artykułów
-          budujących zaufanie pacjentów.
+          Strona internetowa gabinetu psychologiczno-seksuologicznego. Projekt
+          graficzny przygotował designer klientki, a&nbsp;moim zadaniem było
+          wiernie przenieść go do szybkiej, działającej strony
+          z&nbsp;formularzem zapisów i&nbsp;sekcją artykułów budujących zaufanie
+          pacjentów.
         </p>
 
         <h3>
@@ -192,10 +225,13 @@ export default function Page() {
 
         <ul>
           <li>
-            Pacjenci zapisują się przez formularz, a&nbsp;klientka dostaje wszystkie zgłoszenia
-            w&nbsp;jednym miejscu
+            Pacjenci zapisują się przez formularz, a&nbsp;klientka dostaje
+            wszystkie zgłoszenia w&nbsp;jednym miejscu
           </li>
-          <li>Sekcja z&nbsp;artykułami edukacyjnymi buduje zaufanie nowych odwiedzających</li>
+          <li>
+            Sekcja z&nbsp;artykułami edukacyjnymi buduje zaufanie nowych
+            odwiedzających
+          </li>
           <li>Strona dokładnie oddaje projekt graficzny od designera</li>
         </ul>
 
@@ -215,9 +251,10 @@ export default function Page() {
         </Badges>
 
         <p>
-          Portal o&nbsp;zdrowym stylu życia z&nbsp;blogiem, strefą współpracy dla firm
-          i&nbsp;stroną kontaktową. Zaprojektowany tak, żeby czytelnicy łatwo trafiali do
-          artykułów, a&nbsp;potencjalni partnerzy od razu wiedzieli, jak nawiązać współpracę.
+          Portal o&nbsp;zdrowym stylu życia z&nbsp;blogiem, strefą współpracy
+          dla firm i&nbsp;stroną kontaktową. Zaprojektowany tak, żeby czytelnicy
+          łatwo trafiali do artykułów, a&nbsp;potencjalni partnerzy od razu
+          wiedzieli, jak nawiązać współpracę.
         </p>
 
         <h3>
@@ -234,7 +271,10 @@ export default function Page() {
       </Article>
 
       <Article id="pixel-picture" date="2023-07-01" type="sklep">
-        <CoverImage image={pixelPicture} alt="Sklep internetowy Pixel Picture" />
+        <CoverImage
+          image={pixelPicture}
+          alt="Sklep internetowy Pixel Picture"
+        />
 
         <h2>
           <a href="#pixel-picture">Pixel Picture</a>
@@ -247,9 +287,10 @@ export default function Page() {
         </Badges>
 
         <p>
-          Sklep internetowy z&nbsp;pełnym procesem zakupowym. Klient przegląda produkty, składa
-          zamówienia i&nbsp;śledzi ich status, a&nbsp;właściciel sam prowadzi sklep z&nbsp;prostego
-          panelu administracyjnego - bez pomocy programisty.
+          Sklep internetowy z&nbsp;pełnym procesem zakupowym. Klient przegląda
+          produkty, składa zamówienia i&nbsp;śledzi ich status,
+          a&nbsp;właściciel sam prowadzi sklep z&nbsp;prostego panelu
+          administracyjnego - bez pomocy programisty.
         </p>
 
         <h3>
@@ -257,9 +298,17 @@ export default function Page() {
         </h3>
 
         <ul>
-          <li>Cały proces zakupowy w&nbsp;jednym miejscu - od koszyka po historię zamówień</li>
-          <li>Konto użytkownika z&nbsp;możliwością śledzenia statusu zamówienia</li>
-          <li>Panel administracyjny, w&nbsp;którym łatwo dodać nowe produkty i&nbsp;zarządzać sklepem</li>
+          <li>
+            Cały proces zakupowy w&nbsp;jednym miejscu - od koszyka po historię
+            zamówień
+          </li>
+          <li>
+            Konto użytkownika z&nbsp;możliwością śledzenia statusu zamówienia
+          </li>
+          <li>
+            Panel administracyjny, w&nbsp;którym łatwo dodać nowe produkty
+            i&nbsp;zarządzać sklepem
+          </li>
         </ul>
 
         <ProjectLink href="/projekty/pixel-picture" />
