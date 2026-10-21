@@ -4,6 +4,7 @@ import { Badge, Badges } from '@/components/Badge'
 import { PhoneFrame } from '@/components/PhoneFrame'
 import { ProjectLink } from '@/components/ProjectLink'
 import { SparkleIcon } from '@/components/SparkleIcon'
+import arex from '@/images/arex.png'
 import cameraCapture from '@/images/camera-capture.jpg'
 import gigCoordinatorScreen from '@/images/gig-coordinator.png'
 import trixbrix from '@/images/trixbrix.png'
@@ -15,6 +16,52 @@ import pixelPicture from '@/images/pixelpicture.png'
 export default function Page() {
   return (
     <Layout>
+      <Article id="arex" date="2026-10-21" type="www">
+        <CoverImage
+          image={arex}
+          alt="Strona internetowa składu kruszyw i kostki brukowej PHU Arex"
+        />
+
+        <h2>
+          <a href="#arex">PHU Arex</a>
+        </h2>
+
+        <Badges>
+          <Badge tech="nextjs" />
+          <Badge tech="tailwind" />
+        </Badges>
+
+        <p>
+          Strona internetowa dla składu kruszyw i&nbsp;kostki brukowej
+          z&nbsp;Pawłowic, który oferuje też roboty ziemne, układanie kostki
+          i&nbsp;wynajem sprzętu z&nbsp;operatorem. Klient w&nbsp;jednym miejscu
+          sprawdza, co jest na placu, jakim sprzętem dysponuje firma
+          i&nbsp;dokąd dowozi materiał - a&nbsp;potem dzwoni jednym kliknięciem.
+        </p>
+
+        <h3>
+          <SparkleIcon /> Jakie problemy rozwiązuje?
+        </h3>
+
+        <ul>
+          <li>
+            Cała oferta uporządkowana w&nbsp;podstronach: kruszywa, kostka,
+            ceramika, kanalizacja, usługi i&nbsp;sprzęt
+          </li>
+          <li>
+            Prawdziwe zdjęcia z&nbsp;placu i&nbsp;realizacji, powiększane jednym
+            kliknięciem
+          </li>
+          <li>Numer telefonu i&nbsp;godziny otwarcia widoczne od razu</li>
+          <li>
+            Strona pojawia się w&nbsp;Google, gdy ktoś szuka kruszywa lub kostki
+            w&nbsp;okolicy
+          </li>
+        </ul>
+
+        <ProjectLink href="/projekty/arex" />
+      </Article>
+
       <Article id="camera-capture" date="2026-07-31" type="app">
         <CoverImage
           image={cameraCapture}

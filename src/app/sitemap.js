@@ -1,6 +1,7 @@
 const baseUrl = 'https://krzysteczko-m.pl'
 
 const projects = [
+  { slug: 'arex', date: '2026-10-21' },
   { slug: 'camera-capture', date: '2026-07-31' },
   { slug: 'gig-coordinator', date: '2026-05-10' },
   { slug: 'trixbrix', date: '2026-03-24' },
