@@ -37,7 +37,7 @@ export function Intro() {
           <h3 className="text-lg/8 font-semibold tracking-tight text-white">Michał Krzysteczko</h3>
           <p className="text-base/7 text-gray-300">Web developer - strony internetowe, sklepy i&nbsp;aplikacje webowe</p>
           <p className="mt-6 text-base/7 text-gray-300">
-          Cześć! Buduję szybkie strony internetowe, sklepy i&nbsp;aplikacje webowe w&nbsp;Next.js i&nbsp;Ruby on Rails. Prowadzę projekty od A do Z - od pomysłu i&nbsp;projektu, przez kod, po wdrożenie na serwer. Poniżej znajdziesz moje ostatnie realizacje.
+          Cześć! Buduję szybkie strony internetowe, sklepy i&nbsp;aplikacje webowe w&nbsp;Next.js i&nbsp;Ruby on Rails. Prowadzę projekty od A do Z - od pomysłu i&nbsp;projektu, przez kod, po wdrożenie na serwer.<span className="lg:hidden"> Poniżej znajdziesz moje ostatnie realizacje.</span><span className="hidden lg:inline"> Obok znajdziesz moje ostatnie realizacje.</span>
           </p>
         </div>
       </li>
