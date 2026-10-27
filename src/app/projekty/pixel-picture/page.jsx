@@ -2,7 +2,9 @@ import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
 import { CoverImage } from '@/components/Article'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import pixelPicture from '@/images/pixelpicture.png'
+import pixelPictureLogo from '@/images/pixelpicture-logo.png'
 
 export const metadata = {
   title: 'Pixel Picture - sklep internetowy w Ruby on Rails',
@@ -15,7 +17,13 @@ export default function Page() {
     <ProjectLayout title="Pixel Picture" date="2023-07-01">
       <CoverImage image={pixelPicture} alt="Sklep internetowy Pixel Picture" priority />
 
-      <h2>Pixel Picture</h2>
+      <ProjectTitle
+        logo={pixelPictureLogo}
+        href="https://pixelpicture.eu"
+        tagline={<>Sklep z&nbsp;obrazami pixel art gotowymi do powieszenia</>}
+      >
+        Pixel Picture
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="rails" />

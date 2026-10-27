@@ -2,7 +2,9 @@ import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
 import { CoverImage } from '@/components/Article'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import rokita from '@/images/rokita.png'
+import rokitaLogo from '@/images/rokita-logo.png'
 
 export const metadata = {
   title: 'Pomoc drogowa i mechanika - szybka strona mobile-first',
@@ -15,7 +17,13 @@ export default function Page() {
     <ProjectLayout title="Pomoc drogowa i mechanika" date="2026-03-14">
       <CoverImage image={rokita} alt="Strona internetowa firmy pomocy drogowej" priority />
 
-      <h2>Pomoc drogowa i&nbsp;mechanika</h2>
+      <ProjectTitle
+        logo={rokitaLogo}
+        href="https://rokita-pomocdrogowa24.pl"
+        tagline={<>Strona pomocy drogowej i&nbsp;warsztatu mechanicznego</>}
+      >
+        Pomoc drogowa i&nbsp;mechanika
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="nextjs" />

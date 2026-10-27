@@ -2,7 +2,9 @@ import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
 import { CoverImage } from '@/components/Article'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import trixbrix from '@/images/trixbrix.png'
+import trixbrixLogo from '@/images/trixbrix-logo.png'
 
 export const metadata = {
   title: 'Trixbrix - sklep internetowy z torami kompatybilnymi z LEGO',
@@ -15,7 +17,13 @@ export default function Page() {
     <ProjectLayout title="Trixbrix" date="2026-03-24">
       <CoverImage image={trixbrix} alt="Sklep internetowy Trixbrix" priority />
 
-      <h2>Trixbrix</h2>
+      <ProjectTitle
+        logo={trixbrixLogo}
+        href="https://trixbrix.eu"
+        tagline={<>Sklep z&nbsp;torami kolejkowymi kompatybilnymi z&nbsp;LEGO</>}
+      >
+        Trixbrix
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="rails" />

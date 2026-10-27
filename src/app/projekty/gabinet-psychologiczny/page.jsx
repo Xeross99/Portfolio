@@ -2,7 +2,9 @@ import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
 import { CoverImage } from '@/components/Article'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import magda from '@/images/magda.png'
+import magdaLogo from '@/images/magda-logo.png'
 
 export const metadata = {
   title: 'Gabinet psychologiczno-seksuologiczny - strona z zapisami online',
@@ -15,7 +17,13 @@ export default function Page() {
     <ProjectLayout title="Gabinet psychologiczno-seksuologiczny" date="2025-07-31">
       <CoverImage image={magda} alt="Strona internetowa gabinetu psychologiczno-seksuologicznego" priority />
 
-      <h2>Gabinet psychologiczno-seksuologiczny</h2>
+      <ProjectTitle
+        logo={magdaLogo}
+        href="https://magdalenakuznik.pl"
+        tagline={<>Strona gabinetu psychologa i&nbsp;seksuologa</>}
+      >
+        Gabinet psychologiczno-seksuologiczny
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="nextjs" />

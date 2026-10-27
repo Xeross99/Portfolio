@@ -2,7 +2,9 @@ import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
 import { PhoneFrame } from '@/components/PhoneFrame'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import gigCoordinatorScreen from '@/images/gig-coordinator.png'
+import chickenLogo from '@/images/chicken-logo.png'
 
 export const metadata = {
   title: 'Chicken catchers - aplikacja do koordynacji zleceń',
@@ -20,7 +22,12 @@ export default function Page() {
         priority
       />
 
-      <h2>Chicken catchers</h2>
+      <ProjectTitle
+        logo={chickenLogo}
+        tagline={<>Aplikacja do koordynowania zleceń w&nbsp;zespole</>}
+      >
+        Chicken catchers
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="rails" />

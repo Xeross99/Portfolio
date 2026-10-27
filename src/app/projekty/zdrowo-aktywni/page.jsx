@@ -2,7 +2,9 @@ import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
 import { CoverImage } from '@/components/Article'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import zdrowoAktywni from '@/images/zdrowoaktywni.png'
+import zdrowoAktywniLogo from '@/images/zdrowoaktywni-logo.png'
 
 export const metadata = {
   title: 'Zdrowo Aktywni - portal o zdrowym stylu życia',
@@ -15,7 +17,13 @@ export default function Page() {
     <ProjectLayout title="Zdrowo Aktywni" date="2024-12-30">
       <CoverImage image={zdrowoAktywni} alt="Portal Zdrowo Aktywni" priority />
 
-      <h2>Zdrowo Aktywni</h2>
+      <ProjectTitle
+        logo={zdrowoAktywniLogo}
+        href="https://zdrowo-aktywni.pl"
+        tagline={<>Portal o&nbsp;zdrowym stylu życia</>}
+      >
+        Zdrowo Aktywni
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="nextjs" />

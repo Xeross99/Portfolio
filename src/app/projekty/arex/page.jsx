@@ -1,8 +1,10 @@
 import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import { CoverImage } from '@/components/Article'
 import arex from '@/images/arex.png'
+import arexLogo from '@/images/arex-logo.png'
 
 export const metadata = {
   title: 'PHU Arex - strona składu kruszyw i kostki brukowej',
@@ -19,7 +21,15 @@ export default function Page() {
         priority
       />
 
-      <h2>PHU Arex</h2>
+      <ProjectTitle
+        logo={arexLogo}
+        href="https://arexbruk.pl"
+        tagline={
+          <>Strona składu kruszyw i&nbsp;kostki brukowej z&nbsp;Pawłowic</>
+        }
+      >
+        PHU Arex
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="nextjs" />

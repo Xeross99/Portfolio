@@ -2,9 +2,11 @@ import { Layout } from '@/components/Layout'
 import { Article, CoverImage } from '@/components/Article'
 import { Badge, Badges } from '@/components/Badge'
 import { PhoneFrame } from '@/components/PhoneFrame'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import { ProjectLink } from '@/components/ProjectLink'
 import { SparkleIcon } from '@/components/SparkleIcon'
 import arex from '@/images/arex.png'
+import arexLogo from '@/images/arex-logo.png'
 import cameraCapture from '@/images/camera-capture.jpg'
 import gigCoordinatorScreen from '@/images/gig-coordinator.png'
 import trixbrix from '@/images/trixbrix.png'
@@ -12,6 +14,13 @@ import rokita from '@/images/rokita.png'
 import magda from '@/images/magda.png'
 import zdrowoAktywni from '@/images/zdrowoaktywni.png'
 import pixelPicture from '@/images/pixelpicture.png'
+import cameraCaptureLogo from '@/images/camera-capture-logo.png'
+import chickenLogo from '@/images/chicken-logo.png'
+import trixbrixLogo from '@/images/trixbrix-logo.png'
+import magdaLogo from '@/images/magda-logo.png'
+import zdrowoAktywniLogo from '@/images/zdrowoaktywni-logo.png'
+import pixelPictureLogo from '@/images/pixelpicture-logo.png'
+import rokitaLogo from '@/images/rokita-logo.png'
 
 export default function Page() {
   return (
@@ -22,9 +31,15 @@ export default function Page() {
           alt="Strona internetowa składu kruszyw i kostki brukowej PHU Arex"
         />
 
-        <h2>
+        <ProjectTitle
+          logo={arexLogo}
+          href="https://arexbruk.pl"
+          tagline={
+            <>Strona składu kruszyw i&nbsp;kostki brukowej z&nbsp;Pawłowic</>
+          }
+        >
           <a href="#arex">PHU Arex</a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="nextjs" />
@@ -68,12 +83,18 @@ export default function Page() {
           alt="Stanowisko do zdjęć produktowych: aparat Canon na ramieniu i laptop z uruchomioną aplikacją"
         />
 
-        <h2>
+        <ProjectTitle
+          logo={cameraCaptureLogo}
+          href="https://github.com/Xeross99/camera-capture"
+          tagline={<>Aplikacja do automatycznej fotografii produktowej</>}
+        >
           <a href="#camera-capture">Camera Capture</a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="python" />
+          <Badge tech="macos" />
+          <Badge tech="windows" />
         </Badges>
 
         <p>
@@ -120,9 +141,12 @@ export default function Page() {
           className="mx-auto w-full max-w-[18rem]"
         />
 
-        <h2>
+        <ProjectTitle
+          logo={chickenLogo}
+          tagline={<>Aplikacja do koordynowania zleceń w&nbsp;zespole</>}
+        >
           <a href="#chicken-catchers">Chicken catchers</a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="rails" />
@@ -167,9 +191,15 @@ export default function Page() {
       <Article id="trixbrix" date="2026-03-24" type="sklep">
         <CoverImage image={trixbrix} alt="Sklep internetowy Trixbrix" />
 
-        <h2>
+        <ProjectTitle
+          logo={trixbrixLogo}
+          href="https://trixbrix.eu"
+          tagline={
+            <>Sklep z&nbsp;torami kolejkowymi kompatybilnymi z&nbsp;LEGO</>
+          }
+        >
           <a href="#trixbrix">Trixbrix</a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="rails" />
@@ -207,9 +237,13 @@ export default function Page() {
           alt="Strona internetowa firmy pomocy drogowej"
         />
 
-        <h2>
+        <ProjectTitle
+          logo={rokitaLogo}
+          href="https://rokita-pomocdrogowa24.pl"
+          tagline={<>Strona pomocy drogowej i&nbsp;warsztatu mechanicznego</>}
+        >
           <a href="#pomoc-drogowa">Pomoc drogowa i&nbsp;mechanika</a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="nextjs" />
@@ -247,11 +281,15 @@ export default function Page() {
           alt="Strona internetowa gabinetu psychologiczno-seksuologicznego"
         />
 
-        <h2>
+        <ProjectTitle
+          logo={magdaLogo}
+          href="https://magdalenakuznik.pl"
+          tagline={<>Strona gabinetu psychologa i&nbsp;seksuologa</>}
+        >
           <a href="#gabinet-psychologiczny">
             Gabinet psychologiczno-seksuologiczny
           </a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="nextjs" />
@@ -288,9 +326,13 @@ export default function Page() {
       <Article id="zdrowo-aktywni" date="2024-12-30" type="www">
         <CoverImage image={zdrowoAktywni} alt="Portal Zdrowo Aktywni" />
 
-        <h2>
+        <ProjectTitle
+          logo={zdrowoAktywniLogo}
+          href="https://zdrowo-aktywni.pl"
+          tagline={<>Portal o&nbsp;zdrowym stylu życia</>}
+        >
           <a href="#zdrowo-aktywni">Zdrowo Aktywni</a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="nextjs" />
@@ -323,9 +365,13 @@ export default function Page() {
           alt="Sklep internetowy Pixel Picture"
         />
 
-        <h2>
+        <ProjectTitle
+          logo={pixelPictureLogo}
+          href="https://pixelpicture.eu"
+          tagline={<>Sklep z&nbsp;obrazami pixel art gotowymi do powieszenia</>}
+        >
           <a href="#pixel-picture">Pixel Picture</a>
-        </h2>
+        </ProjectTitle>
 
         <Badges>
           <Badge tech="rails" />

@@ -4,6 +4,7 @@ import { SparkleIcon } from '@/components/SparkleIcon'
 import { ProjectLayout } from '@/components/ProjectLayout'
 import { Badge, Badges } from '@/components/Badge'
 import { CoverImage } from '@/components/Article'
+import { ProjectTitle } from '@/components/ProjectTitle'
 import cover from '@/images/camera-capture.jpg'
 import raw1 from '@/images/camera-capture-1-raw.jpg'
 import final1 from '@/images/camera-capture-1.jpg'
@@ -14,6 +15,7 @@ import final3 from '@/images/camera-capture-3.jpg'
 import appSessions from '@/images/camera-capture-app-sessions.jpg'
 import appSession from '@/images/camera-capture-app-session.jpg'
 import appReview from '@/images/camera-capture-app-review.jpg'
+import cameraCaptureLogo from '@/images/camera-capture-logo.png'
 
 const gallery = [
   { image: raw1, alt: 'Surowe zdjęcie produktu prosto z aparatu' },
@@ -60,10 +62,18 @@ export default function Page() {
         priority
       />
 
-      <h2>Camera Capture</h2>
+      <ProjectTitle
+        logo={cameraCaptureLogo}
+        href="https://github.com/Xeross99/camera-capture"
+        tagline={<>Aplikacja do automatycznej fotografii produktowej</>}
+      >
+        Camera Capture
+      </ProjectTitle>
 
       <Badges>
         <Badge tech="python" />
+        <Badge tech="macos" />
+        <Badge tech="windows" />
       </Badges>
 
       <p>
