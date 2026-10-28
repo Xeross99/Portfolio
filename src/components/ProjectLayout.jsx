@@ -48,9 +48,35 @@ function FixedSidebar({ main }) {
   )
 }
 
+// Breadcrumbs for Google (Search Console → Menu nawigacyjne): home → project.
+// The last item is the current page, so it has no URL.
+function BreadcrumbJsonLd({ title }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Strona główna',
+        item: 'https://krzysteczko-m.pl/',
+      },
+      { '@type': 'ListItem', position: 2, name: title },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  )
+}
+
 export function ProjectLayout({ title, date, children }) {
   return (
     <>
+      <BreadcrumbJsonLd title={title} />
       <FixedSidebar main={<Intro />} />
       <ThemeToggle />
       <div className="relative flex-auto">
