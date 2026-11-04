@@ -5,7 +5,7 @@ Next.js 16 portfolio site, plain JSX views (no MDX). Projects have an index (hom
 ## Stack
 
 - Next.js 16 (App Router)
-- Tailwind CSS 4
+- Tailwind CSS 4 via `@tailwindcss/turbopack` (loader in `next.config.mjs`, no PostCSS)
 - Deployed on Vercel
 
 ## Structure
