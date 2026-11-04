@@ -1,11 +1,11 @@
 # Portfolio
 
-Next.js 14 portfolio site, plain JSX views (no MDX). Projects have an index (home page) and detail pages (`/projekty/<slug>`).
+Next.js 16 portfolio site, plain JSX views (no MDX). Projects have an index (home page) and detail pages (`/projekty/<slug>`).
 
 ## Stack
 
-- Next.js 14 (App Router)
-- Tailwind CSS 4
+- Next.js 16 (App Router)
+- Tailwind CSS 4 via `@tailwindcss/turbopack` (loader in `next.config.mjs`, no PostCSS)
 - Deployed on Vercel
 
 ## Structure
